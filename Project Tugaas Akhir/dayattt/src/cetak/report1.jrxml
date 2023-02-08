@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1100" pageHeight="572" orientation="Landscape" columnWidth="1100" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="955ba596-a44b-4cb0-b2d5-f358a6a75867">
+	<property name="ireport.zoom" value="0.7513148009015856"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT masukmemasuk.ID_PELANGGAN, pelanggan.NAMA, masukmemasuk.NOSERI, masukmemasuk.JENIS, masukmemasuk.KELENGKAPAN, masukmemasuk.MEREK, masukmemasuk.KELUHAN,masukmemasuk.HARGADIAGNOSA,masukmemasuk.APLIKASI,masukmemasuk.HARGAAPLIKASI, masukmemasuk.CATATAN, masukmemasuk.WAKTU, masukmemasuk.TOTALHARGA, masukmemasuk.STATUS, masukmemasuk.CODE FROM masukmemasuk INNER JOIN pelanggan ON masukmemasuk.ID_PELANGGAN=pelanggan.ID_PELANGGAN WHERE CODE = $P{kode}]]>
+	</queryString>
+	<field name="ID_PELANGGAN" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NAMA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOSERI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="JENIS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KELENGKAPAN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MEREK" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KELUHAN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HARGADIAGNOSA" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="APLIKASI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HARGAAPLIKASI" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CATATAN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="WAKTU" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TOTALHARGA" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="STATUS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="TOTALHARGA_1" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{TOTALHARGA}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="117" splitType="Stretch">
+			<frame>
+				<reportElement x="86" y="0" width="752" height="117" uuid="5b728458-4617-42fe-92d3-050b0ec4992c"/>
+				<staticText>
+					<reportElement x="172" y="0" width="374" height="48" uuid="7f17b5bd-9849-4f1d-b122-6adecae501bc"/>
+					<textElement textAlignment="Center">
+						<font size="36"/>
+					</textElement>
+					<text><![CDATA[TEKNISI KOMPUTER PONTIANAK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="172" y="48" width="374" height="20" uuid="a9d2d4b3-7274-48b4-b322-f2289aaa3d1c"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[JL.Pak Benceng Gg.Merodadi 3A Kios No.1, Pontianak, Kalminatan Barat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="172" y="68" width="374" height="20" uuid="c3831b47-a45a-45e5-8570-8cb367e70714"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[0852-4535-3410 www.teknisikomputerpontianak.com]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="172" y="88" width="374" height="20" uuid="328d6db8-faa8-4cea-b287-30637e9bf72e"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[TANDA TERIMA SERVICE / REPARASI]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="1100" height="20" uuid="34eaa5be-3fb9-4d55-a690-f86296354bc5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e797910e-e00a-4e89-8b52-38ecf91b0102"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOSERI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="ef03e82e-a03c-4e8d-8f81-d5f45cd969a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JENIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="fac8f2c0-bbbc-49a0-9477-0801eb3a4877"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KELENGKAPAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="23648ea7-9b66-457a-842f-45ecc8dab3bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[MEREK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="122" height="20" uuid="201c0c6e-84d2-4984-88f7-efccadffc83f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KELUHAN / DIAGNOSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="0" width="130" height="20" uuid="0dddfc1b-2669-4995-9ee1-1b5cea00c6a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CATATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="652" y="0" width="100" height="20" uuid="be190dda-faee-41cf-94f5-7e9bd88c6149"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[APLIKASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="1" width="130" height="20" uuid="15834394-0ebe-4119-87e8-a253abb9e8ce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[HARGA DIAGNOSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="752" y="1" width="118" height="20" uuid="af59eb39-1fa1-450f-b8f7-01fa1008b09a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[HARGA APLIKASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1000" y="1" width="100" height="20" uuid="010fffee-a3cf-4d73-bfc8-fa41ce1f593f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TOTALHARGA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="1100" height="68" uuid="b45ae9ad-09c1-4f7c-bec1-482150a53a21"/>
+			</rectangle>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="88109560-80ee-43f6-9704-ddc198c7c7bc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{JENIS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="fbad551e-97b0-4397-9781-fcc47cb3e6bf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{KELENGKAPAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="f18e7cc1-21a1-4891-803b-c948123f4c78"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MEREK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="122" height="20" uuid="d0f5f76c-e93b-4522-b52b-c782e02db1f2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{KELUHAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="522" y="0" width="130" height="68" uuid="46cb8c0e-1794-4502-98d0-da9041ba2c1c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{HARGADIAGNOSA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="652" y="0" width="100" height="20" uuid="6b7b05df-5d82-4cbe-bd90-557fd2bc3c80"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{APLIKASI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="752" y="0" width="118" height="20" uuid="4592ee72-73d5-4d39-9e05-17e392258181"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{HARGAAPLIKASI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="870" y="0" width="130" height="68" uuid="da5f295a-4b0f-420f-973e-d258eb96ab61"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CATATAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1000" y="0" width="100" height="20" uuid="9092fcfa-e300-4d4b-992c-a28edfb7f759"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TOTALHARGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="06379c2d-57d1-4b29-aa2a-1c3bb68d4332"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NOSERI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="305" splitType="Stretch">
+			<rectangle>
+				<reportElement x="870" y="0" width="230" height="20" uuid="ee5f37d7-6ccc-4638-a237-f71f8da48e01"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="962" y="90" width="130" height="129" uuid="557c7ced-2714-4dd8-a21b-f8230e74e4a1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="832" y="90" width="130" height="129" uuid="09776e39-ed11-4b95-9458-83a75e0020bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="962" y="90" width="130" height="20" uuid="4450f109-70cf-4eb6-8f75-4f140dca9b5d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="962" y="90" width="130" height="20" uuid="e97376f1-401f-4e67-94a3-a5b4d593e284"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[RULI AMRI]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="832" y="90" width="130" height="20" uuid="22213437-890f-4c59-a6c3-9692d7c50986"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="962" y="189" width="130" height="30" uuid="1fd66cf1-f21d-48fc-8ffb-ed3d1ab42f8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[PEMILIK TOKO TEKNISI KOMPUTER PONTIANAK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="832" y="189" width="130" height="30" uuid="b970e89f-9592-40dc-bfbc-7629b1b4a58d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[PENERIMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="0" width="130" height="20" uuid="ec29e3f9-c250-48b1-ab45-3eccf9502822"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TOTAL  :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="858" y="59" width="209" height="20" uuid="e1aef546-0eb7-4563-9518-42c97208534d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="858" y="77" width="209" height="1" uuid="2ef4b731-a12d-4523-a8bc-c30cbab0aceb"/>
+			</line>
+			<textField>
+				<reportElement x="832" y="188" width="130" height="14" uuid="74b38fe0-a40d-4cb0-9d37-e001f89aee43"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="832" y="90" width="130" height="20" uuid="c6387408-468e-4318-a1b5-f4b9d1253133"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NAMA}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="0" width="480" height="233" backcolor="#FFFFFF" uuid="9115e58e-038b-41be-bfa8-33f69d0062f9"/>
+				<elementGroup>
+					<staticText>
+						<reportElement x="0" y="20" width="480" height="39" uuid="11024d13-0999-4073-808f-2de6e69db7dc"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[1. Pihak kami tidak bertanggung jawab terhadap kehilangna data, pelanggan WAJIB membackup/mengamankan datanya terlebih dahulu]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="0" width="144" height="20" uuid="e03f7b78-c18c-4f28-a533-e485f4ca3400"/>
+						<text><![CDATA[Syatar Dan Ketentuan aman]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="59" width="480" height="43" uuid="8a87010e-d034-4ace-9f7f-34bd88de3dd7"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[2. Barang yang sudah di service lebih dari 1(satu) bulan dan barang tidak diambil jika terjadi hilang, dan rusak bukan tanggung jawab pihak kami ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="102" width="480" height="43" uuid="72ea0794-3e1f-4da4-82d7-ada13be6d6a2"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[3. Pelanggan wajib memeriksa unit pada saat pengambilan dan memastikan barang dalam kondisi baik dan berfungsi ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="147" width="480" height="43" uuid="72ea0794-3e1f-4da4-82d7-ada13be6d6a2"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[4. Lembar ini merupakan bukti pengambilan unit. Segala resiko yang diakibatkan oleh hilangnya lembar ini adalah di luar tanggung jawab kami]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="190" width="480" height="43" uuid="72ea0794-3e1f-4da4-82d7-ada13be6d6a2"/>
+						<textElement verticalAlignment="Middle"/>
+						<text><![CDATA[5. Pelanggan yang menanda tangani lembar ini telah memahami serta menyetujui syaratdan ketentuan di atas]]></text>
+					</staticText>
+				</elementGroup>
+			</frame>
+			<textField>
+				<reportElement x="1000" y="0" width="100" height="20" uuid="92ffef12-c8e6-4791-b9e2-b55782243181"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{TOTALHARGA_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
