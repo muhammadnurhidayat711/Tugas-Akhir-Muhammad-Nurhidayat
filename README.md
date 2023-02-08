@@ -1,10 +1,10 @@
 Cara menggunakan aplikasi Kasir padaa toko teknisi komputer pontianak berbasis dekstop
 
-1.Buka aplikasi kasir.exe pada foldre Binary
-2.Login menggunakan username (dayat) dan Password (dayat)
-3.pilih menu yang diinginkan
-4.inputkan data sesuai dengan permintaan field yang ada pada aplikasi
-5.klik simpan
+1. Buka aplikasi kasir.exe pada foldre Binary
+2. Login menggunakan username (dayat) dan Password (dayat)
+3. pilih menu yang diinginkan
+4. inputkan data sesuai dengan permintaan field yang ada pada aplikasi
+5. klik simpan
 
 Cara menimport database
 
